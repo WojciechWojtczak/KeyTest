@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		Wojciech Wojtczak
+		Nr indeksu: 99572
+		Semestr: 3
+		Grupa: 2
+		Przedmiot: Wykorzystanie wzorców w technologiach internetowych
+		-->
+		<title>KeyTest</title>
+		<link rel="stylesheet" href="style.css">
+		<script language="JavaScript" src="skrypt.js">
+		
+		</script>
+	</head>
+	<body >
+		<h1>Key test</h1>
+		<h2 id="lang">Choose language </h2>
+		<!-- combobox do wyboru języka -->
+		<form>
+			<select size="1" id="language" onchange="change()" >
+				<option>Choose language</option>
+				<option value="International">International</option>
+				<option value="French">French</option>
+			</select>
+		</form>
+		<hr>
+		<!--tablica w której są wyświetlane grafiki klawiszy -->
+		<table>
+			<tr>
+				<script>
+					for ($i = 0; $i < 13; $i++){
+						document.write("<td id=\"kb1"+$i+"\"></td>");
+					}
+				</script>
+				</br>
+			</tr>
+			<tr>
+				<script>
+					for ($i = 0; $i < 21; $i++){
+						document.write("<td id=\"kb2"+$i+"\"></td>");
+					}
+				</script>
+				</br>
+			</tr>
+			<tr>
+				<script>
+					for ($i = 0; $i < 21; $i++){
+						if($i==20){
+							document.write("<td rowspan=\"2\" id=\"kb3"+$i+"\"></td>");
+						}
+						else{
+							document.write("<td id=\"kb3"+$i+"\"></td>");
+						}
+						
+					}
+				</script>
+				</br>
+			</tr>
+			<tr>
+				<script>
+					for ($i = 0; $i < 19; $i++){
+						if($i==12){
+							document.write("<td colspan=\"2\" id=\"kb4"+$i+"\"></td>");
+						}
+						else{
+							document.write("<td id=\"kb4"+$i+"\"></td>");
+						}
+						
+					}
+				</script>
+				</br>
+			</tr>
+			<tr>
+				<script>
+					for ($i = 0; $i < 19; $i++){
+						if($i==0||$i==11){
+							document.write("<td colspan=\"2\" id=\"kb5"+$i+"\"></td>");
+						}
+						else if ($i==18){
+							document.write("<td rowspan=\"2\" id=\"kb5"+$i+"\"></td>");
+						}
+						else{
+						document.write("<td id=\"kb5"+$i+"\"></td>");
+						}
+					}
+				</script>
+				</br>
+			</tr>
+			<tr>
+				<script>
+					for ($i = 0; $i < 14; $i++){
+						if ($i==3){
+							document.write("<td colspan=\"6\" id=\"kb6"+$i+"\"></td>");
+						}
+						else if ($i==12){
+							document.write("<td colspan=\"2\" id=\"kb6"+$i+"\"></td>");
+						}
+						else{
+							document.write("<td id=\"kb6"+$i+"\"></td>");
+						}
+					}
+				</script>
+			</tr>
+		</table>
+	</body>
+</html>
